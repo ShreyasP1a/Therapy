@@ -2,6 +2,8 @@
 
 This is the Don't Be Afraid to Talk project for Hackabull 2019, which uses node.js express socket.io, and twilio to build a communication application that people who need help can easily get help. One thing that we noticed was that people are very shy in order to get help, and most online therapy websites require to pay money and have to sign up. People who need help need help right away and do not want to have to sign. This app would allow you to have a conversation using 3 diffrent communication methods, texting, audio conference, and face to face conversations. This app would only use volunteer therapist that have been certified.
 
+
+The things that are not implemented right now are the video messaging and the voice chat still learning how to do that using twilio.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
