@@ -28,10 +28,11 @@ io.on('connection', (socket) => {
 
 
   });
- // console.log('a user connected');
+
 
   socket.on('disconnect', () => {
-   // console.log('user disconnected');
+
+    
   });
 });
 
@@ -68,10 +69,19 @@ client.messages.create({
     res.end();
  }); });
 
-app.post('/messageComesIn', (req, res) => {
-  console.log("I am here");
-  console.log(req.body.Body);
+app.get('/therapist', function (req, res) {
+  res.render('therapist.html');
+});
 
+app.get('/about', function (req, res) {
+  res.render('about.html');
+});
+app.get('/login', function (req, res) {
+  res.render('LogIn.html');
+});
+
+ //Message comes in from phone Socket will send to client
+app.post('/messageComesIn', (req, res) => {
   let body = req.body.Body;
 
   io.sockets.emit('textFromPerson', { body });

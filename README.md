@@ -41,7 +41,6 @@ ngrok.exe http 3000
 Open the url that ngrok gives you
 
 
-```
 
 
 ## Built With
@@ -59,9 +58,3 @@ Open the url that ngrok gives you
 * **Annie Brey** - *Front End* 
 
 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
