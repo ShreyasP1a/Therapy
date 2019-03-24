@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
     client.messages.create({
       body: body,
       from: '+19045874407',
-      to: '+19042943037'
+      to: ''
     }).then(message => {
 
       io.sockets.emit("textToPerson", { body });
@@ -42,8 +42,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 	
 
 
-const accountSid = 'ACa586cf0802a64b2dce469d97cf741a67';
-const authToken = '79e36f1468fe265ce8f60f7e4cbcbbd2';
+const accountSid = '';
+const authToken = '';
 const client = require('twilio')(accountSid, authToken);
 
 app.set('views', __dirname + '/views');
@@ -61,8 +61,8 @@ app.post('/sendMessage' , (req,res) => {
 	let text = req.body.exampleTextArea;
 client.messages.create({
      body: text,
-     from: '+19045874407',
-     to: '+19042943037'
+     from: '',
+     to: ''
   }).then(message => {
     res.render("SubmitVideo.ejs", {text: text});
    // console.log(message);
