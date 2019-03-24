@@ -18,7 +18,7 @@ io.on('connection', (socket) => {
     console.log("This is running in the node js server");
     client.messages.create({
       body: body,
-      from: '+19045874407',
+      from: '',
       to: ''
     }).then(message => {
 
