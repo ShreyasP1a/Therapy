@@ -14,13 +14,60 @@
       rel="stylesheet"
       href="https://bootswatch.com/4/litera/bootstrap.min.css"
     />
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+    
+    <title>E-Therapy</title>
+	
       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
       <script src="client.js"></script>
-    <title>E-Therapy</title>
   </head>
+   <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-primary">
+      <a class="navbar-brand" href="/">Don't Be Afraid To Talk</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+		vertical-align ="text-top"
+        data-toggle="collapse"
+        data-target="#navbarColor01"
+        aria-controls="navbarColor01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Therapist">Therapist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+	
+	<div
+      class="jumbotron text-light"
+      style="background-image: url(background.jpg); 
+	  text-align: center;
+      background-repeat: no-repeat;
+      background-size: auto;"
+    >
+      <h1 class="display-3">Don't be Afraid to Talk!</h1>
+      <p class="white">
+        This is your chat with a certified therapist.
+      </p>
+   
+      
+      
+    </div>
   <script>
  
     
@@ -100,14 +147,9 @@ html {
 }
 body {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top
 }
 
-
-body {
-  display: table-cell;
-  vertical-align: middle;
-}
 body {
   margin: 0 auto;
   max-width: 800px;
@@ -115,16 +157,23 @@ body {
 }
 
 .container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
+  border: 2px solid #007AFF;
+  background-color: #007AFF;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+  text-align: right;
+  color: white;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
 }
 
 .darker {
-  border-color: #ccc;
+  border-color: #ddd;
   background-color: #ddd;
+  color: black;
+   text-align: left;
+   margin-left: 50px;
 }
 
 .container::after {
@@ -156,49 +205,24 @@ body {
   float: left;
   color: #999;
 }
+.title {
+	text-align: center;
+}
+.bubble {
+	width: 100%;
+	margin-left: 250px;
+}
 </style>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-success bg-light">
-      <a class="navbar-brand" href="#">E-Therapy</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarColor01"
-        aria-controls="navbarColor01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="therapist.html">Therapist</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="HowItWorks.html">How it works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+   
+	<br>
+	<br>
 	
-	
-<h2>Chat With Therapist 1</h2>
+<h2 class="title">John Doe</h2>
 
 <div id ="cont" >
 
-<div class="container">
+<div class="container bubble"> 
   <p><%= text %></p>
 </div>
       
@@ -218,10 +242,9 @@ body {
 </div>
       
     </div>
-	<div class="container"
-	<h2><font size="+2">About E-Therapy</font></h2>
-	<p>We take certified therapists <a href="therapist.html">(Our Therapists)</a> and automatically match them with anonymous users who submit their concerns on the home page.</p>
 	
+	<br>
+	<br>
 	<hr class="my-4" />
 
 <div class="footer" style="background-color:#FFFFFF;clear:both;text-align:center;">

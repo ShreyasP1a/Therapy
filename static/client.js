@@ -3,14 +3,6 @@
 
    
 
-$("#form").submit(function (e) {
-
-  console.log("Please prevent default"); 
-  e.preventDefault();
-  let body = document.getElementById("exampleTextarea").textContent;
-  socket.emit("textPerson", { body });
-
-});
 
 function testing(){
 
@@ -48,7 +40,7 @@ socket.on('textToPerson', function (call) {
   var p = document.createElement("div");
   p.textContent = call.body;
   div.appendChild(p);
-  div.classList.add('container');
+  div.classList.add('container', 'bubble');
   document.getElementById('cont').appendChild(div);
 });
 
