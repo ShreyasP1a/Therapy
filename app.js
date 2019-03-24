@@ -18,8 +18,8 @@ io.on('connection', (socket) => {
     console.log("This is running in the node js server");
     client.messages.create({
       body: body,
-      from: '+19045874407',
-      to: '+19042943037'
+      from: '',
+      to: ''
     }).then(message => {
 
       io.sockets.emit("textToPerson", { body });
